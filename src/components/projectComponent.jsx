@@ -58,109 +58,61 @@ function ProjectComponent() {
 
   const ProjectCard = ({ project, index }) => (
     <motion.div
-      className={`${project.bgColor} p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group`}
-      initial={{ opacity: 0, y: 50 }}
+      className={`${project.bgColor} p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group`}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.5,
-        delay: index * 0.1,
+        duration: 0.4,
+        delay: index * 0.05,
         ease: "easeOut",
       }}
-      viewport={{ once: true, margin: "-100px" }}
-      whileHover={{
-        y: -8,
-        transition: { duration: 0.2 },
-      }}
+      viewport={{ once: true, margin: "-50px" }}
     >
       {/* Project Image */}
-      <motion.div
-        className="mb-4 overflow-hidden rounded-lg"
-        whileHover={{ scale: 1.02 }}
-        transition={{ duration: 0.3 }}
-      >
-        <motion.img
+      <div className="mb-4 overflow-hidden rounded-lg">
+        <img
           src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
+          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
         />
-      </motion.div>
+      </div>
 
       {/* Project Content */}
       <div className="space-y-4">
-        <motion.h3
-          className="text-xl font-bold group-hover:text-blue-600 transition-colors duration-200"
-          whileHover={{ x: 5 }}
-          transition={{ duration: 0.2 }}
-        >
+        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
           {project.title}
-        </motion.h3>
+        </h3>
 
-        <motion.p
-          className=" text-sm leading-relaxed line-clamp-3"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: index * 0.1 + 0.2 }}
-        >
+        <p className="text-sm leading-relaxed line-clamp-3 text-gray-600">
           {project.desc}
-        </motion.p>
+        </p>
 
         {/* Tech Stack */}
-        <motion.div
-          className="flex flex-wrap gap-2"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ delay: index * 0.1 + 0.3 }}
-        >
+        <div className="flex flex-wrap gap-2">
           {project.tech.map((tech, techIndex) => (
-            <motion.span
+            <span
               key={techIndex}
-              className="px-3 py-1 bg-white bg-opacity-80 text-xs font-medium rounded-full border"
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: index * 0.1 + 0.4 + techIndex * 0.05,
-                type: "spring",
-                stiffness: 200,
-              }}
-              whileHover={{
-                scale: 1.1,
-                backgroundColor: "#3B82F6",
-                color: "#ffffff",
-              }}
+              className="px-3 py-1 bg-white bg-opacity-80 text-xs font-medium rounded-full border hover:bg-blue-50 transition-colors duration-200"
             >
               {tech}
-            </motion.span>
+            </span>
           ))}
-        </motion.div>
+        </div>
 
         {/* Project Link */}
-        <motion.div
-          className="pt-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 + 0.5 }}
-        >
-          <motion.a
+        <div className="pt-4">
+          <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors duration-200"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-            }}
-            whileTap={{ scale: 0.95 }}
           >
-            <motion.span>View Project</motion.span>
-            <motion.svg
+            <span>View Project</span>
+            <svg
               className="w-4 h-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              whileHover={{ x: 3, y: -3 }}
-              transition={{ duration: 0.2 }}
             >
               <path
                 strokeLinecap="round"
@@ -168,112 +120,68 @@ function ProjectComponent() {
                 strokeWidth={2}
                 d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
               />
-            </motion.svg>
-          </motion.a>
-        </motion.div>
+            </svg>
+          </a>
+        </div>
       </div>
     </motion.div>
   );
 
   return (
-    <motion.section
-      className="w-full py-16 px-4"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
+    <section className="w-full py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
           className="text-start mb-12"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
         >
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-4"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.6,
-              delay: 0.2,
-              type: "spring",
-              stiffness: 100,
-            }}
-          >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             Here's What I've Been Up To
-          </motion.h2>
-          <motion.p
-            className="text-lg max-w-2xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          </h2>
+          <p className="text-lg max-w-2xl text-gray-600">
             A collection of projects I've built while learning and growing as a
             frontend developer
-          </motion.p>
+          </p>
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
         <motion.div
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <motion.p
-            className="mb-6"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-          >
+          <p className="mb-6 text-gray-600">
             Want to see more of my work or collaborate on a project?
-          </motion.p>
-          <motion.button
-            className="px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-500 transition-colors duration-200"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)",
+          </p>
+          <button
+            onClick={() => {
+              const contactSection = document.getElementById("contact-section");
+              if (contactSection) {
+                contactSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
             }}
-            whileTap={{ scale: 0.95 }}
+            className="px-8 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-700 transition-colors duration-200"
           >
-            <a
-              onClick={() => {
-                const contactSection =
-                  document.getElementById("contact-section");
-                if (contactSection) {
-                  contactSection.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }
-              }}
-              href=""
-              className="decoration-none text-white"
-            >
-              Get In Touch
-            </a>
-          </motion.button>
+            Get In Touch
+          </button>
         </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

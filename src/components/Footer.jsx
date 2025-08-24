@@ -13,25 +13,25 @@ function Footer() {
     {
       name: "GitHub",
       icon: Github,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/socheema",
       color: "text-gray-600 hover:text-gray-900"
     },
     {
       name: "Twitter",
       icon: Twitter,
-      href: "https://twitter.com/yourusername",
+      href: "https://x.com/tech_chi_",
       color: "text-gray-600 hover:text-blue-400"
     },
     {
       name: "Resume",
       icon: FileText,
-      href: "/resume.pdf",
+      href: "/",
       color: "text-gray-600 hover:text-green-600"
     },
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:your.email@example.com",
+      href: "mailto:chimafrancis94@gmail.com",
       color: "text-gray-600 hover:text-red-500"
     }
   ];
@@ -129,7 +129,7 @@ function Footer() {
             </p>
             <motion.a
               href="mailto:your.email@example.com"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-black/70 text-white text-sm rounded-lg hover:bg-black/30 transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

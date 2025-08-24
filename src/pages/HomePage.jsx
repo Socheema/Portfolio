@@ -1,6 +1,5 @@
 import ProjectComponent from "../components/projectComponent";
 import About from "../components/About";
-// import CardComponent from "../components/cardComponent";
 import Header from "../components/header";
 import HeroSection from "../components/heroSection";
 import ContactSection from "../components/contactComponent";

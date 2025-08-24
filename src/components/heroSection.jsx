@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import profile from "../assets/profile.png";
+import profile from "../assets/profile.jpg";
 
 function HeroSection() {
   return (
@@ -34,7 +34,7 @@ function HeroSection() {
             ease: "easeOut"
           }}
         >
-          <h3 className="text-3xl font-semibold leading-10 md:leading-13 md:text-5xl">
+          <h3 className="text-3xl font-semibold leading-10 md:leading-13 md:text-5xl text-gray-900">
             Hi, I'm Azubuike Chima. <br />A Frontend Developer
           </h3>
         </motion.div>
@@ -49,7 +49,7 @@ function HeroSection() {
             ease: "easeOut"
           }}
         >
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="text-base md:text-lg text-gray-600">
             I am a frontend developer with a passion for creating beautiful and
             functional user interfaces.
           </p>

@@ -258,7 +258,7 @@ function ContactSection() {
             </div>
           </motion.form>
 
-          {/* Additional Contact Info */}
+
           <motion.div
             className="mt-12 text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -278,7 +278,7 @@ function ContactSection() {
             >
               <motion.a
                 href="mailto:your.email@example.com"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-black/30 hover:text-blue-800 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
               >
                 <svg
@@ -301,7 +301,7 @@ function ContactSection() {
                 href="tel:+2348163077401"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-black/30 hover:text-blue-800 transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
               >
                 <svg

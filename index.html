@@ -1,13 +1,187 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Viewport and Mobile Optimization -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="theme-color" content="#000000" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Frontend Developer specializing in React, JavaScript, and modern web technologies. View my portfolio showcasing ClipZap, Zupay, and other innovative web applications."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, React Developer, JavaScript, Web Developer, Portfolio, ClipZap, Zupay, HTML, CSS, Node.js"
+    />
+    <meta name="author" content="Azubuike Chima" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Your Name - Frontend Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Frontend Developer specializing in React, JavaScript, and modern web technologies. View my portfolio showcasing innovative web applications."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="https://socheemaportfolio.vercel.app" />
+    <meta property="og:site_name" content="Azubuike Chima Portfolio" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Your Name - Frontend Developer Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Frontend Developer specializing in React, JavaScript, and modern web technologies."
+    />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    <meta name="twitter:creator" content="@tech_chi_" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://socheemaportfolio.vercel.app" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts (if you're using any) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" /> -->
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/src/main.jsx" as="script" />
+
+    <!-- Page Title -->
+    <title>Azubuike Chima - Frontend Developer Portfolio</title>
+
+    <!-- Schema.org JSON-LD for Rich Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Azubuike chima",
+        "jobTitle": "Frontend Developer",
+        "description": "Frontend Developer specializing in React, JavaScript, and modern web technologies",
+        "url": "https://socheemaportfolio.vercel.app",
+        "sameAs": [
+          "https://github.com/socheema",
+          "https://linkedin.com/in/azubuikechima",
+          "https://twitter.com/tech_chi_"
+        ],
+        "knowsAbout": [
+          "React",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Node.js",
+          "MongoDB",
+          "Web Development",
+          "NextJS",
+          "Shopify",
+
+        ],
+        "workLocation": {
+          "@type": "Place",
+          "name": "Lagos, Nigeria"
+        }
+      }
+    </script>
+
+    <!-- Performance and Security -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Prevent zoom on iOS -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
   </head>
   <body>
+    <!-- Loading Screen (optional) -->
+    <div
+      id="loading-screen"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      "
+    >
+      <div
+        style="
+          width: 40px;
+          height: 40px;
+          border: 3px solid #f3f3f3;
+          border-top: 3px solid #333;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        "
+      ></div>
+    </div>
+
+    <style>
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Main App Container -->
     <div id="root"></div>
+
+    <!-- Scripts -->
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Remove loading screen after app loads -->
+    <script>
+      window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        if (loadingScreen) {
+          setTimeout(() => {
+            loadingScreen.style.opacity = "0";
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 300);
+          }, 500);
+        }
+      });
+    </script>
+
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
   </body>
 </html>

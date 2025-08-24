@@ -13,14 +13,14 @@ function About() {
         ease: "easeOut",
       }}
     >
-      <h2 className="text-3xl font-semibold md:text-5xl">About</h2>
-      <p>
+      <h2 className="text-3xl font-semibold md:text-5xl text-gray-900">About</h2>
+      <p className="text-gray-600">
         I am a passionate web developer with a focus on creating dynamic and
         responsive user experiences. My journey in web development has equipped
         me with a diverse skill set, including proficiency in HTML, CSS,
         JavaScript, and various frameworks.
       </p>
-      <p>
+      <p className="text-gray-600">
         I thrive on challenges and continuously seek to improve my skills and
         knowledge in the ever-evolving tech landscape.
       </p>
