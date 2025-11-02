@@ -11,6 +11,31 @@ function ProjectComponent() {
   const projects = [
     {
       id: 1,
+      image: audiophile,
+      title: "Audiophile - Empowering Young Africans",
+      bgColor: "bg-gray-50",
+      desc: "Audiophile is your go-to destination for premium audio products designed to elevate your listening experience. Explore our wide range of headphones, speakers, and earphones crafted for true audiophiles.",
+      link: "https://audiophile-three-pi.vercel.app/",
+      tech: [
+        "React",
+        "convex",
+        "Resend",
+        "Tailwind CSS",
+        "TypeScript",
+        "Radix UI",
+      ],
+    },
+    {
+      id: 2,
+      image: ticketflow,
+      title: "TicketFlow",
+      bgColor: "bg-blue-50",
+      desc: "Monitor ticket status and progress in real-time with instant updates.Organize tickets by status, priority, and category for better workflow management.",
+      link: "https://ticket-flow-nu.vercel.app/",
+      tech: ["Vue", "Typescript", "Radix UI"],
+    },
+    {
+      id: 3,
       image: clipzap,
       title: "ClipZap",
       bgColor: "bg-gray-50",
@@ -19,7 +44,7 @@ function ProjectComponent() {
       tech: ["React", "Node.js", "MongoDB"],
     },
     {
-      id: 2,
+      id: 4,
       image: Zupay,
       title: "Zupay",
       bgColor: "bg-blue-50",
@@ -28,31 +53,13 @@ function ProjectComponent() {
       tech: ["React", "Express", "Stripe API"],
     },
     {
-      id: 3,
+      id: 5,
       image: Stripe,
       title: "Stripe Clone",
       bgColor: "bg-purple-50",
       desc: "A Stripe clone that replicates the payment processing interface with modern design principles. Features responsive design and smooth user interactions.",
       link: "https://striipe.netlify.app/",
       tech: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      id: 4,
-      image: poortfolio,
-      title: "Portfolio",
-      bgColor: "bg-green-50",
-      desc: "A personal portfolio website that showcases my skills, projects, and experiences. It features a clean design, responsive layout, and easy navigation to highlight my work and achievements.",
-      link: "https://potfoleu.netlify.app/",
-      tech: ["React", "Tailwind CSS", "Framer Motion"],
-    },
-    {
-      id: 5,
-      image: Meal,
-      title: "Meal App",
-      bgColor: "bg-orange-50",
-      desc: "A meal planning app that helps users discover, plan, and prepare meals. It features a recipe database, meal planning tools, and grocery list generation to simplify the cooking process.",
-      link: "https://meal-aps.netlify.app/",
-      tech: ["React", "API Integration", "Local Storage"],
     },
   ];
 
