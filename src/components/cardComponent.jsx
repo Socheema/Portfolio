@@ -1,18 +1,18 @@
 import clipzap from "../assets/clipzapp.png";
-import Meal from "../assets/Meal.png";
-import poortfolio from "../assets/poortfolio.png";
 import Zupay from "../assets/Zupay.png";
 import Stripe from "../assets/stripe.png";
+import audiophile from "../assets/audiophile.png";
+import ticketflow from "../assets/ticketflow.png";
 import Marquee from "react-fast-marquee";
 
 function CardComponent() {
   // Project data for easier maintenance
   const projects = [
-    { id: 1, image: clipzap, title: "ClipZap", bgColor: "bg-gray-300" },
-    { id: 2, image: Zupay, title: "Zupay", bgColor: "bg-white" },
-    { id: 3, image: Stripe, title: "Stripe Clone", bgColor: "bg-white" },
-    { id: 4, image: poortfolio, title: "Portfolio", bgColor: "bg-white" },
-    { id: 5, image: Meal, title: "Meal App", bgColor: "bg-white" },
+    { id: 1, image: audiophile, title: "Audiophile", bgColor: "bg-gray-300" },
+    { id: 2, image: ticketflow, title: "TicketFlow", bgColor: "bg-white" },
+    { id: 3, image: clipzap, title: "ClipZap", bgColor: "bg-gray-300" },
+    { id: 4, image: Zupay, title: "Zupay", bgColor: "bg-white" },
+    { id: 5, image: Stripe, title: "Stripe Clone", bgColor: "bg-white" },
   ];
 
   // Reusable card component

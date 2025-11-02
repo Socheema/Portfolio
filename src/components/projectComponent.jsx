@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import clipzap from "../assets/clipzapp.png";
-import Meal from "../assets/Meal.png";
-import poortfolio from "../assets/Poortfolio.png";
 import Zupay from "../assets/Zupay.png";
 import Stripe from "../assets/Stripe.png";
+import audiophile from "../assets/audiophile.png";
+import ticketflow from "../assets/ticketflow.png";
 import ContactSection from "./contactComponent";
 
 function ProjectComponent() {
