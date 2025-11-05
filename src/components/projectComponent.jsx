@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import clipzap from "../assets/clipzapp.png";
 import Zupay from "../assets/Zupay.png";
 import Stripe from "../assets/Stripe.png";
-import audiophile from "../assets/audiophile.png";
+import audiophile from "../assets/audiophile-image.png";
 import ticketflow from "../assets/ticketflow.png";
 import ContactSection from "./contactComponent";
 
